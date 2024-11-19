@@ -34,50 +34,57 @@ Let R be a relation from a set A to a set B and S a relation from B to a set C. 
 
 ## 4. Closures of relations - Bao đóng của quan hệ
 "Bao đóng X" của quan hệ R được định nghĩa là tập cha nhỏ nhất của R mà có tính chất đó
-#### Reflexive closure - Bao đóng phản xạ
-Bổ sung (a, a) vào R với mỗi $a \in A$
+####Reflexive closure - Bao đóng phản xạ
+- Bổ sung (a, a) vào R với mỗi $a \in A$
 
-Tức $R \cup I_A$
+- Tức $R \cup I_A$
 #### Symmetric closure - Bao đóng đối xứng
-Bổ sung (b, a) vào R cho mỗi (a, b) trong R
+- Bổ sung (b, a) vào R cho mỗi (a, b) trong R
 
-Tức $R \cup R^{-1}$
+- Tức $R \cup R^{-1}$
 
 #### Transitive closures - Bao đóng bắc cầu
 >The connectivity relation R* consists of the pairs (a, b) such that there is a path of length at least one from a to b in R.
 
-Bổ sung (a, c) vào R cho mỗi (a, b), (b, c) trong R
+- Bổ sung (a, c) vào R cho mỗi (a, b), (b, c) trong R
 
 #### Connectivity relation R*
-![simpleTransitiveClosure.png]()
+![simpleTransitiveClosure.png](https://github.com/thou05/discrete-mathematics/blob/main/img/simpleTransitiveClosure.png)
 
 
-A FASTER TRANSITIVE CLOSURE ALGORITHM
+**A FASTER TRANSITIVE CLOSURE ALGORITHM**
+
 	**Procedure**: transClosure($M_R$ : zero-one $n \times n$ matrix)
+	
 	A := $M_R$
+	
 	for i := 1 to $\lceil log_2n \rceil$
+	
 		A := A $\odot$ (A + $I_n$)
+		
 	return A
+
 
 > The transitive closure of a relation R = the connectivity relation R* 
 
 > Let $M_R$ be the zero–one matrix of the relation R on a set with n elements. Then the zero–one matrix of the transitive closure R* is 
 >     $M_{R*} = M_R \vee M^2_R \vee M^3_R \vee ... \vee M^n_R$  
-.
 
 **VD**: 
 A = {a, b, c, d} => n = 4
+
 R = {(a, b), (b, d), (c, c), (d, b), (d, a)}
+
 Tìm R* ?
 
-![]()
+![](https://github.com/thou05/discrete-mathematics/blob/main/img/exampleTransitiveClosure.svg)
 
 
 => R* = ${(a, a), (a, b), (a, d)...}$
 
 
 #### Warshall Algorithm
-![warshall.png]()
+![warshall.png](https://github.com/thou05/discrete-mathematics/blob/main/img/warshall.png)
 
 - B1: Tìm $W_0 = M_R$ 
 - B2: Tìm $W_k$ (k = 1 -> n) theo quy tắc
@@ -87,7 +94,8 @@ Tìm R* ?
 	=> $R* = W_n$ 
 
 VD:
-!()[]
+!()[https://github.com/thou05/discrete-mathematics/blob/main/img/exampleWarShall.svg]
+
 => $R_{BC} ={(a,a), (a,c), (a,e), (b,e), (c,a), (c,c), (c,e), (d,d)}$
 
 
