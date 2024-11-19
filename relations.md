@@ -4,19 +4,17 @@ Ký hiệu: aRb
 
 
 #### Relations on a set - Quan hệ trên một tập hợp
-###### Reflexivity - Phản xạ
-> A relation on a set A is a relation from A to A.
-
-aRa, $\forall a \in A$
-###### Irreflexive - Phi phản xạ
-quan hệ bù của nó $\not R$ là phản xạ
-###### Symmetry - Đối xứng
-> A relation R on a set A is called symmetric if (b, a) ∈ R whenever (a, b) ∈ R, for all a, b ∈ A.
-###### Antisymmetry - Phản xứng
->A relation R on a set A such that for all a, b ∈ A, if (a, b) ∈ R and (b, a) ∈ R, then a = b is called antisymmetric.
-###### Transitivity - Bắc cầu
-$(a,b) \in R \wedge (b, c) \in R \to (a,c) \in R$
-$\forall a, b, c$ 
+- Reflexivity - Phản xạ
+	> A relation on a set A is a relation from A to A.
+	- aRa, $\forall a \in A$
+- Irreflexive - Phi phản xạ
+	- quan hệ bù của nó $\not R$ là phản xạ
+- Symmetry - Đối xứng
+	> A relation R on a set A is called symmetric if (b, a) ∈ R whenever (a, b) ∈ R, for all a, b ∈ A.
+- Antisymmetry - Phản xứng
+	> A relation R on a set A such that for all a, b ∈ A, if (a, b) ∈ R and (b, a) ∈ R, then a = b is called antisymmetric.
+- Transitivity - Bắc cầu
+	- $(a,b) \in R \wedge (b, c) \in R \to (a,c) \in R$,  $\forall a, b, c$ 
 
 #### Combining relations
 Let R be a relation from a set A to a set B and S a relation from B to a set C. The composite of R and S is the relation consisting of ordered pairs (a, c), where a ∈ A, c ∈ C, and for which there exists an element b ∈ B such that (a, b) ∈ R and (b, c) ∈ S. We denote the composite of R and S by S ◦ R.
@@ -34,7 +32,7 @@ Let R be a relation from a set A to a set B and S a relation from B to a set C. 
 
 ## 4. Closures of relations - Bao đóng của quan hệ
 "Bao đóng X" của quan hệ R được định nghĩa là tập cha nhỏ nhất của R mà có tính chất đó
-####Reflexive closure - Bao đóng phản xạ
+#### Reflexive closure - Bao đóng phản xạ
 - Bổ sung (a, a) vào R với mỗi $a \in A$
 
 - Tức $R \cup I_A$
@@ -77,7 +75,7 @@ R = {(a, b), (b, d), (c, c), (d, b), (d, a)}
 
 Tìm R* ?
 
-![](https://github.com/thou05/discrete-mathematics/blob/main/img/exampleTransitiveClosure.svg)
+![](https://github.com/thou05/discrete-mathematics/blob/main/img/exampleTransitiveClosure.png)
 
 
 => R* = ${(a, a), (a, b), (a, d)...}$
@@ -94,7 +92,7 @@ Tìm R* ?
 	=> $R* = W_n$ 
 
 VD:
-!()[https://github.com/thou05/discrete-mathematics/blob/main/img/exampleWarShall.svg]
+![](https://github.com/thou05/discrete-mathematics/blob/main/img/exampleWarShall.png)
 
 => $R_{BC} ={(a,a), (a,c), (a,e), (b,e), (c,a), (c,c), (c,e), (d,d)}$
 
