@@ -49,27 +49,28 @@ Let R be a relation from a set A to a set B and S a relation from B to a set C. 
 ### Connectivity relation R*
 ![simpleTransitiveClosure.png](https://github.com/thou05/discrete-mathematics/blob/main/img/simpleTransitiveClosure.png)
 
+![](https://github.com/thou05/discrete-mathematics/blob/main/img/fasterTranstiveClosure.png)
 
 
 
 -  The transitive closure of a relation R = the connectivity relation R* 
 
 - Let $M_R$ be the zero–one matrix of the relation R on a set with n elements. Then the zero–one matrix of the transitive closure R* is 
->     $M_{R*} = M_R \vee M^2_R \vee M^3_R \vee ... \vee M^n_R$  
+>$M_{R*} = M_R \vee M^2_R \vee M^3_R \vee ... \vee M^n_R$  
 
 
 
 <details><summary>Xem ví dụ</summary>
 <p>
-	A = {a, b, c, d} => n = 4
+A = {a, b, c, d} => n = 4
 
-	R = {(a, b), (b, d), (c, c), (d, b), (d, a)}
+R = {(a, b), (b, d), (c, c), (d, b), (d, a)}
 
-	Tìm R* ?
+Tìm R* ?
 
-	![](https://github.com/thou05/discrete-mathematics/blob/main/img/exampleTransitiveClosure.png)
+![](https://github.com/thou05/discrete-mathematics/blob/main/img/exampleTransitiveClosure.png)
 
-	=> R* = ${(a, a), (a, b), (a, d)...}$
+=> R* = ${(a, a), (a, b), (a, d)...}$
 </p>
 </details>
 
