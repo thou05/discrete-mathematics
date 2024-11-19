@@ -54,15 +54,15 @@ Let R be a relation from a set A to a set B and S a relation from B to a set C. 
 
 **A FASTER TRANSITIVE CLOSURE ALGORITHM**
 
-	**Procedure**: transClosure($M_R$ : zero-one $n \times n$ matrix)
-	
-	A := $M_R$
-	
-	for i := 1 to $\lceil log_2n \rceil$
-	
-		A := A $\odot$ (A + $I_n$)
-		
-	return A
+>	**Procedure**: transClosure($M_R$ : zero-one $n \times n$ matrix)
+>	
+>	A := $M_R$
+>	
+>	for i := 1 to $\lceil log_2n \rceil$
+>	
+>		A := A $\odot$ (A + $I_n$)
+>		
+>	return A
 
 
 > The transitive closure of a relation R = the connectivity relation R* 
