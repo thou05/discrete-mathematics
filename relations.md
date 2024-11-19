@@ -26,11 +26,6 @@ Let R be a relation from a set A to a set B and S a relation from B to a set C. 
 
 ## 3. Representing relations
 #### Using matrices
-$M_R =$ $$ \begin{bmatrix} 
-1 & 1 & 0 \\ 
-1 & 1 & 1 \\ 
-0 & 1 & 1 
-\end{bmatrix} $$
 
 #### Using digraphs
 
@@ -41,9 +36,11 @@ $M_R =$ $$ \begin{bmatrix}
 "Bao đóng X" của quan hệ R được định nghĩa là tập cha nhỏ nhất của R mà có tính chất đó
 #### Reflexive closure - Bao đóng phản xạ
 Bổ sung (a, a) vào R với mỗi $a \in A$
+
 Tức $R \cup I_A$
 #### Symmetric closure - Bao đóng đối xứng
 Bổ sung (b, a) vào R cho mỗi (a, b) trong R
+
 Tức $R \cup R^{-1}$
 
 #### Transitive closures - Bao đóng bắc cầu
@@ -52,10 +49,10 @@ Tức $R \cup R^{-1}$
 Bổ sung (a, c) vào R cho mỗi (a, b), (b, c) trong R
 
 #### Connectivity relation R*
-![[simpleTransitiveClosure.png]]
+![simpleTransitiveClosure.png]()
 
 
->A FASTER TRANSITIVE CLOSURE ALGORITHM
+A FASTER TRANSITIVE CLOSURE ALGORITHM
 	**Procedure**: transClosure($M_R$ : zero-one $n \times n$ matrix)
 	A := $M_R$
 	for i := 1 to $\lceil log_2n \rceil$
@@ -73,21 +70,14 @@ A = {a, b, c, d} => n = 4
 R = {(a, b), (b, d), (c, c), (d, b), (d, a)}
 Tìm R* ?
 
- $M_R$ = $\begin{bmatrix} \begin{array}{c c c c} 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 1 & 1 & 0 & 0 \end{array} \end{bmatrix}$    
- 
- $M^2_R$ = $M_R \otimes M_R$ = $\begin{bmatrix} \begin{array}{c c c c} 0 & 0 & 0 & 1 \\ 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{array} \end{bmatrix}$  
+![]()
 
- $M^3_R$ = $M^2_R \otimes M_R$ = $\begin{bmatrix} \begin{array}{c c c c} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 1 & 1 & 0 & 1 \end{array} \end{bmatrix}$  
- 
-$M^4_R$ = $M^3_R \otimes M_R$ = $\begin{bmatrix} \begin{array}{c c c c} 0 & 1 & 0 & 1 \\ 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 1 & 1 & 0 & 1 \end{array} \end{bmatrix}$ 
-
-$M_{R*} = M_R \vee M^2_R \vee M^3_R \vee M^4_R$  = $\begin{bmatrix} \begin{array}{c c c c} 1 & 1 & 0 & 1 \\ 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 1 & 1 & 0 & 1 \end{array} \end{bmatrix}$ 
 
 => R* = ${(a, a), (a, b), (a, d)...}$
 
 
 #### Warshall Algorithm
-![[warshall.png]]
+![warshall.png]()
 
 - B1: Tìm $W_0 = M_R$ 
 - B2: Tìm $W_k$ (k = 1 -> n) theo quy tắc
@@ -97,12 +87,7 @@ $M_{R*} = M_R \vee M^2_R \vee M^3_R \vee M^4_R$  = $\begin{bmatrix} \begin{array
 	=> $R* = W_n$ 
 
 VD:
- $W_0$ = $\begin{bmatrix} \begin{array}{c  c c c} 0 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 \end{array} \end{bmatrix}$         $W_1$ = $\begin{bmatrix} \begin{array}{c | c c c} 0 & 0 & 1 & 0 & 1 \\ \hline 0 & 0 & 0 & 0 & 1 \\ 1 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 \end{array} \end{bmatrix}$  
-
-$W_2$ = $\begin{bmatrix} \begin{array}{c c | c c} 0 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 0 & 1 \\ \hline  1 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \end{array} \end{bmatrix}$          $W_3$ = $\begin{bmatrix} \begin{array}{c c c|  c c} 1 & 0 & 1 & 0 & 1 \\  0 & 0 & 0 & 0 & 1 \\ 1 & 0 & 1 & 0 & 1 \\ \hline 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 \end{array} \end{bmatrix}$ 
-
-$W_4$ = $\begin{bmatrix} \begin{array}{c c c c | c} 1 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 0 & 1 \\ 1 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 1 & 0 \\ \hline 0 & 0 & 0 & 0 & 0\end{array} \end{bmatrix}$         $W_5$ = $\begin{bmatrix} \begin{array}{c c c c c |} 1 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 0 & 1 \\ 1 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 \\ \hline \end{array} \end{bmatrix}$ 
-
+!()[]
 => $R_{BC} ={(a,a), (a,c), (a,e), (b,e), (c,a), (c,c), (c,e), (d,d)}$
 
 
