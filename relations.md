@@ -50,37 +50,26 @@ Let R be a relation from a set A to a set B and S a relation from B to a set C. 
 ![simpleTransitiveClosure.png](https://github.com/thou05/discrete-mathematics/blob/main/img/simpleTransitiveClosure.png)
 
 
-**A FASTER TRANSITIVE CLOSURE ALGORITHM**
-
-**Procedure**: transClosure($M_R$ : zero-one $n \times n$ matrix)
-
-A := $M_R$
-
-for i := 1 to $\lceil log_2n \rceil$
-
-	A := A $\odot$ (A + $I_n$)
-	
-return A
 
 
-> The transitive closure of a relation R = the connectivity relation R* 
+-  The transitive closure of a relation R = the connectivity relation R* 
 
-> Let $M_R$ be the zero–one matrix of the relation R on a set with n elements. Then the zero–one matrix of the transitive closure R* is 
+- Let $M_R$ be the zero–one matrix of the relation R on a set with n elements. Then the zero–one matrix of the transitive closure R* is 
 >     $M_{R*} = M_R \vee M^2_R \vee M^3_R \vee ... \vee M^n_R$  
 
 
 
 <details><summary>Xem ví dụ</summary>
 <p>
-A = {a, b, c, d} => n = 4
+	A = {a, b, c, d} => n = 4
 
-R = {(a, b), (b, d), (c, c), (d, b), (d, a)}
+	R = {(a, b), (b, d), (c, c), (d, b), (d, a)}
 
-Tìm R* ?
+	Tìm R* ?
 
-![](https://github.com/thou05/discrete-mathematics/blob/main/img/exampleTransitiveClosure.png)
+	![](https://github.com/thou05/discrete-mathematics/blob/main/img/exampleTransitiveClosure.png)
 
-=> R* = ${(a, a), (a, b), (a, d)...}$
+	=> R* = ${(a, a), (a, b), (a, d)...}$
 </p>
 </details>
 
