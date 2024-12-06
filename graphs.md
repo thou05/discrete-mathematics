@@ -51,9 +51,9 @@
 #### Thuật toán Prim
 
 Đồ thị G = (V,E) liên thông, có n đỉnh.
-➢ Bước 1: Chọn một cạnh bất kỳ có trọng số nhỏ nhất, đặt nó vào cây khung.
-➢ Bước 2: Lần lượt ghép vào cây các cạnh có trọng số nhỏ nhất **liên thuộc** với **một đỉnh của cây và không tạo ra chu trình** trong cây.
-➢ Bước 3: Thuật toán dừng lại khi (n-1) cạnh được ghép vào cây. (tức ghép đc tất cả các đỉnh)
+- Bước 1: Chọn một cạnh bất kỳ có trọng số nhỏ nhất, đặt nó vào cây khung.
+- Bước 2: Lần lượt ghép vào cây các cạnh có trọng số nhỏ nhất **liên thuộc** với **một đỉnh của cây và không tạo ra chu trình** trong cây.
+- Bước 3: Thuật toán dừng lại khi (n-1) cạnh được ghép vào cây. (tức ghép đc tất cả các đỉnh)
 
 ---
 Prim ghép vào cây có trongj số nhỏ nhất liên thuộc với cây khung đang có
@@ -93,74 +93,85 @@ Giải
 |  4  |      __       |     (4,a)     |    (3,d)*     |      __       |      __       |   __   |     (3,a)     |
 |  5  |      __       |     (4,a)     |      __       |      __       |      __       |   __   |    (3,a)*     |
 |  6  |      __       |    (4,a)*     |      __       |      __       |      __       |   __   |      __       |
+
 Đường đi ngắn nhất: g -> a -> b
+
 Độ dài = 6
 
-Đồ thị 2: tương tự
 
 2. Cho đồ thị vô hướng có trọng số G sau:  
-	a, Đồ thị G có đường đi Euler không, vì sao? Nếu có, hãy tìm 1 đường đi Euler của  G.  
-	b, Hãy trình bày thuật toán Kruskal để tìm cây khung nhỏ nhất của G, biết thứ tự  lựa chọn các đỉnh ưu tiên theo thứ tự trong bảng chữ cái (chú ý: thể hiện được ý tưởng của  thuật toán).
+	a. Đồ thị G có đường đi Euler không, vì sao? Nếu có, hãy tìm 1 đường đi Euler của  G.  
+	b. Hãy trình bày thuật toán Kruskal để tìm cây khung nhỏ nhất của G, biết thứ tự  lựa chọn các đỉnh ưu tiên theo thứ tự trong bảng chữ cái (chú ý: thể hiện được ý tưởng của  thuật toán).
+	
 	![](https://github.com/thou05/discrete-mathematics/blob/main/img/dothidethi2.png)
+	
+```
 Giải
 a. 
 -  Đồ thị G có đường đi Euler vì có 2 đỉnh h, e bậc lẻ
 - Đường đi: e d g e b a c b h c d h g a h
+
 b.
 
 | Bước chọn | Cạnh | Trọng số |
-| :-------: | :--: | :------: |
 |     1     |  ah  |    1     |
 |     2     |  bc  |    1     |
 |     3     |  ch  |    1     |
 |     4     |  dg  |    1     |
 |     5     |  ag  |    2     |
 |     6     |  ge  |    2     |
+
 Tổng trọng số là 8
-Cây
-```
+
 Cây: 
-		a
+	    a
 	  /   \
 	 h     g
 	/     / \ 
-   c     d   e
-  / 
- b  
+       c     d   e
+      / 
+     b  
 
 hoặc biểu diễn vẽ theo các cạnh
 
 ```
 
-3. Cho đồ thị vô hướng có trọng số G sau. Hãy trình bảy thuật toán Prim dưới dạng bảng đế  tìm cây khung nhỏ nhất của G, biết thứ tự lựa chọn các đỉnh ưu tiên theo thứ tự trong bảng chữ cái. ![](https://github.com/thou05/discrete-mathematics/blob/main/img/dothidethi3.png)
-	Note:
-	- có 7 đỉnh -> cần tìm 6 cạnh
+3. Cho đồ thị vô hướng có trọng số G sau. Hãy trình bảy thuật toán Prim dưới dạng bảng đế  tìm cây khung nhỏ nhất của G, biết thứ tự lựa chọn các đỉnh ưu tiên theo thứ tự trong bảng chữ cái. 
+
+![](https://github.com/thou05/discrete-mathematics/blob/main/img/dothidethi3.png)
+
+```
+Note:
+- có 7 đỉnh -> cần tìm 6 cạnh
+```
 	
-	Giải
+Giải
 	
 
-| Bước chọn | Cạnh | Trọng số |
-| :-------: | :--: | :------: |
-|     1     |  ah  |    1     |
-|     2     |  hc  |    1     |
-|     3     |  bc  |    1     |
-|     4     |  ag  |    2     |
-|     5     |  gd  |    1     |
-|     6     |  ge  |    2     |
+	| Bước chọn | Cạnh | Trọng số |
+	| :-------: | :--: | :------: |
+	|     1     |  ah  |    1     |
+	|     2     |  hc  |    1     |
+	|     3     |  bc  |    1     |
+	|     4     |  ag  |    2     |
+	|     5     |  gd  |    1     |
+	|     6     |  ge  |    2     |
+	
 	Tổng trọng số là 8
 ```
 Cây: 
-		a
+	    a
 	  /   \
 	 h     g
 	/     / \ 
-   c     d   e
-  / 
- b  
+       c     d   e
+      / 
+     b  
 		
 ```
 
 4. Cho đồ thị vô hướng có trọng số G sau biết thứ tự lựa chọn các đỉnh ưu tiên theo thứ tự trong bảng chữ cái. Hãy trình bày thuật toán Dijkstra dưới dạng bảng để tìm đường đi ngắn nhất  từ đỉnh h đến đỉnh e và cho biết độ dài của đường đi đó.
+
 	![](https://github.com/thou05/discrete-mathematics/blob/main/img/dothidethi1.png)
 Giải
 
@@ -173,10 +184,13 @@ Giải
 |  5  |      __       |      __       |      __       |     (4,h)     |     (9,b)     |    (3,a)*     |   __    |
 |  6  |      __       |      __       |      __       |    (4,h)*     |     (5,g)     |      __       |   __    |
 |  7  |      __       |      __       |      __       |      __       |    (5,g)*     |      __       |   __    |
+
 Đường đi ngắn nhất: h -> a -> g -> e
+
 Độ dài = 5
 
 5. Cho đồ thị vô hướng có trọng số G sau biết thứ tự lựa chọn các đỉnh ưu tiên theo thứ tự trong bảng chữ cái. Hãy trình bày thuật toán Dijkstra dưới dạng bảng để tìm đường đi ngắn nhất  từ đỉnh c đến đỉnh e và cho biết độ dài của đường đi đó.
+
 	![](https://github.com/thou05/discrete-mathematics/blob/main/img/dothidethi1.png)
 Giải
 
@@ -189,22 +203,11 @@ Giải
 |  5  |      __       |      __       |   __   |    (3,c)*     |     (8,b)     |     (4,a)     |      __       |
 |  6  |      __       |      __       |   __   |      __       |     (8,b)     |    (4,a)*     |      __       |
 |  7  |      __       |      __       |   __   |      __       |    (6,e)*     |      __       |      __       |
+
 Đường đi ngắn nhất: c -> h -> a -> g -> e
+
 Độ dài : 6
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
-  <style>
-    text {
-      fill: black;
-    }
-    @media (prefers-color-scheme: dark) {
-      text {
-        fill: white;
-      }
-    }
-  </style>
-  <text x="10" y="30" font-size="20">Hello World</text>
-</svg>
 
 
 -----
