@@ -29,7 +29,6 @@
 ## 2. n-ary Relations and their applications
 
 
-![](https://i.imgur.com/waxVImv.png)
 ## 3. Representing relations
 ### Using matrices
 
@@ -56,12 +55,8 @@
 
 #### Connectivity relation R*
 
-![simpleTransitiveClosure.png](https://github.com/thou05/discrete-mathematics/blob/main/img/simpleTransitiveClosure.png)
-
-![](https://github.com/thou05/discrete-mathematics/blob/main/img/fasterTranstiveClosure.png)
-
-<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/simpleTransitiveClosure.png" width="300" height=auto>
-<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/fasterTranstiveClosure.png" width="300" height=auto>
+<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/simpleTransitiveClosure.png" width="500" height=auto>
+<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/fasterTranstiveClosure.png" width="500" height=auto>
 
 
 -  The transitive closure of a relation R = the connectivity relation R* 
@@ -69,26 +64,19 @@
 - Let $M_R$ be the zero–one matrix of the relation R on a set with n elements. Then the zero–one matrix of the transitive closure R* is 
 >$M_{R*} = M_R \vee M^2_R \vee M^3_R \vee ... \vee M^n_R$  
 
-
-
-<details><summary>Xem ví dụ</summary>
-<p>
+```
+Ví dụ
 A = {a, b, c, d} => n = 4
-
 R = {(a, b), (b, d), (c, c), (d, b), (d, a)}
-
 Tìm R* ?
-
-![](https://github.com/thou05/discrete-mathematics/blob/main/img/exampleTransitiveClosure.png)
+```
+<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/exampleTransitiveClosure.png" width="500" height=auto>
 
 => R* = ${(a, a), (a, b), (a, d)...}$
-</p>
-</details>
 
-s
 
 #### Warshall Algorithm
-![warshall.png](https://github.com/thou05/discrete-mathematics/blob/main/img/warshall.png)
+<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/warshall.png" width="500" height=auto>
 
 - B1: Tìm $W_0 = M_R$ 
 - B2: Tìm $W_k$ (k = 1 -> n) theo quy tắc
@@ -96,18 +84,13 @@ s
 	- Giữ lại các phần tử = 1 từ $W_{k-1}$ -> $W_k$ 
 	- Các phần tử còn lại xác định bằng phép hội gióng lên hàng k cột k tương ứng 
 	=> $R* = W_n$ 
+	
+Ví dụ:
 
-<details><summary>Xem ví dụ</summary>
-<p>
-
-![](https://github.com/thou05/discrete-mathematics/blob/main/img/exampleWarShall.png)
-
-</p>
-</details>
+<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/exampleWarShall.png" width="500" height=auto>
 
 
 
-======================================================================
 ## 5. Equivalence relations - Quan hệ tương đương
 - Quan hệ tương đương trên A là quan hệ hai ngôi bất kì mà phản xạ, đối xứng và bắc cầu
 ### Equivalence classes
@@ -116,7 +99,6 @@ s
 - Phân hoạch của tập A là tập mọi lớp tương đương của 1 quan hệ tương đương nào đó
 - Chúng chia tập A thành các mảnh rời nhau, mỗi mảnh chứa mọi phần tử tương đương với nhau
 
-=======================================================================
 ## 6. Partial Orderings - Thứ tự bộ phận
 
 
