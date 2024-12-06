@@ -1,5 +1,13 @@
 <link rel="stylesheet" type="text/css" href="file:///Users/pat/Library/Application Support/abnerworks.Typora/themes/newsprint.css">
 
+<style>
+   img{
+   	width: 300px;
+   	height: auto;
+   }
+</style>
+
+
 ## 1. Relations and their properties
 ### 1.1 Binary relations - Quan hệ hai ngôi 
 - Quan hệ 2 ngôi R từ A và B là tập con của A x B
@@ -27,9 +35,6 @@
 
 ### 1.5 Composite relations - Tích quan hệ
 
-
-
-![](https://i.imgur.com/waxVImv.png)
 
 ## 2. n-ary Relations and their applications
 
@@ -60,10 +65,13 @@
 - Bổ sung (a, c) vào R cho mỗi (a, b), (b, c) trong R
 
 #### Connectivity relation R*
+
 ![simpleTransitiveClosure.png](https://github.com/thou05/discrete-mathematics/blob/main/img/simpleTransitiveClosure.png)
 
 ![](https://github.com/thou05/discrete-mathematics/blob/main/img/fasterTranstiveClosure.png)
 
+<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/simpleTransitiveClosure.png" >
+<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/fasterTranstiveClosure.png">
 
 
 -  The transitive closure of a relation R = the connectivity relation R* 
