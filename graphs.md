@@ -192,6 +192,19 @@ Giải
 Đường đi ngắn nhất: c -> h -> a -> g -> e
 Độ dài : 6
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
+  <style>
+    text {
+      fill: black;
+    }
+    @media (prefers-color-scheme: dark) {
+      text {
+        fill: white;
+      }
+    }
+  </style>
+  <text x="10" y="30" font-size="20">Hello World</text>
+</svg>
 
 
 -----
