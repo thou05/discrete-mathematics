@@ -1,13 +1,3 @@
-<link rel="stylesheet" type="text/css" href="file:///Users/pat/Library/Application Support/abnerworks.Typora/themes/newsprint.css">
-
-<style>
-   img{
-   	width: 300px;
-   	height: auto;
-   }
-</style>
-
-
 ## 1. Relations and their properties
 ### 1.1 Binary relations - Quan hệ hai ngôi 
 - Quan hệ 2 ngôi R từ A và B là tập con của A x B
@@ -70,8 +60,8 @@
 
 ![](https://github.com/thou05/discrete-mathematics/blob/main/img/fasterTranstiveClosure.png)
 
-<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/simpleTransitiveClosure.png" >
-<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/fasterTranstiveClosure.png">
+<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/simpleTransitiveClosure.png" width="300" height=auto>
+<img src="https://github.com/thou05/discrete-mathematics/blob/main/img/fasterTranstiveClosure.png" width="300" height=auto>
 
 
 -  The transitive closure of a relation R = the connectivity relation R* 
