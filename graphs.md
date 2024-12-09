@@ -80,10 +80,10 @@ Prim ghép vào cây có trongj số nhỏ nhất liên thuộc với cây khung
 ## Đề thi mẫu - câu 4
 
 1. Cho đồ thị vô hướng có trọng số G sau biết thứ tự lựa chọn các đỉnh ưu tiên theo thứ tự trong bảng chữ cái. Hãy trình bày thuật toán Dijkstra dưới dạng bảng để tìm đường đi ngắn nhất  từ đỉnh g đến định b và cho biết độ dài của đường đi đó.
-	![https://github.com/thou05/discrete-mathematics/blob/main/img/dothidethi1.png]
+
+	![](https://github.com/thou05/discrete-mathematics/blob/main/img/dothidethi1.png)
 	
 Giải
-Đồ thị 1:
 
 |  k  |       a       |       b       |       c       |       d       |       e       |   g    |       h       |
 | :-: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :----: | :-----------: |
@@ -94,8 +94,7 @@ Giải
 |  5  |      __       |     (4,a)     |      __       |      __       |      __       |   __   |    (3,a)*     |
 |  6  |      __       |    (4,a)*     |      __       |      __       |      __       |   __   |      __       |
 
-Đường đi ngắn nhất: g -> a -> b
-
+Đường đi ngắn nhất: g -> a -> b \\
 Độ dài = 6
 
 
@@ -113,7 +112,7 @@ a.
 
 b.
 
-| Bước chọn | Cạnh | Trọng số |
+| Bước chọn | Cạnh | Trọng số |	
 |     1     |  ah  |    1     |
 |     2     |  bc  |    1     |
 |     3     |  ch  |    1     |

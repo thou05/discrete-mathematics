@@ -399,9 +399,8 @@ Bảng phủ
 
 	Giải
 	
-	A = $(((p \wedge \overline{r}) \vee q) \wedge (q \to r)) \to (p \vee r)$ 
-	
-	<=> $(((p \wedge \overline{r}) \vee q) \wedge (q \to r)) \to (p \vee r)$ 
+	A = $(((p \wedge \overline{r}) \vee q) \wedge (q \to r)) \to (p \vee r)$\\
+	<=> $(((p \wedge \overline{r}) \vee q) \wedge (q \to r)) \to (p \vee r)$\\
 	
 	<=> $(\overline{((p \wedge \overline{r}) \vee q) \wedge (\overline{q} \vee r)}) \vee (p \vee r)$ 
 	
